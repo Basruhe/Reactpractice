@@ -1,10 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import React, { Component } from "react";
+import Title from "./Title";
 
 function App() {
   return (
     <div className="App">
+      <main>
+        <Title content="Some Simple Title" />
+      </main>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -24,3 +30,8 @@ function App() {
 }
 
 export default App;
+export default class Title extends Component {
+  render() {
+    return <h1>{this.props.content}</h1>;
+  }
+}
